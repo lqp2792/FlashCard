@@ -32,28 +32,34 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="input-group input-group-lg">
+                        <input type="text" ng-model="word" class="form-control input-lg" id="search-input"
+                               ng-keyup="$event.keyCode == 13 ? searchWord(word) : null"
+                               placeholder="ここに入力してください">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-default btn-lg" ng-click="searchWord(word)">検索
+                            </button>
+                        </span>
+                    </div>
                 </div>
                 <div class="col-sm-4" role="meaning">
-
                 </div>
                 <div class="col-sm-4 center-block" role="flash card">
                     <div class="card center-block">
                         <div flip style="width: 100%; height: 100%">
                             <div class="thumbnail" ng-click="showBackPanel()">
-                                <div class="word">
-                                    {{ word.kanji }}
-                                </div>
+                                <p class="word">
+                                    {{ kanji }}
+                                </p>
                             </div>
-                            <div class="thumbnail" style="background-color: #67b168" ng-click="showFrontPanel()">
-                                {{ word.hiragana }}
+                            <div class="thumbnail" ng-click="showFrontPanel()">
+                                {{ hiragana }}
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4" role="example">
-
                 </div>
             </div>
         </div>

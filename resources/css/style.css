@@ -21,16 +21,22 @@ body {
     -webkit-transform           : perspective(800px) rotateY(0deg);
     -moz-transform              : perspective(800px) rotateY(0deg);
 }
+
+.flip-panel:hover {
+    -moz-box-shadow    : 0 0 15px #999 inset;
+    -webkit-box-shadow : 0 0 15px #999 inset;
+    box-shadow         : 0 0 15px #999 inset;
+}
+
 .front .word {
-    font-size: xx-large;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    border-bottom: double;
+    font-size  : xx-large;
+    text-align : center;
+    margin     : 0 auto;
+    width      : 200px;
+    word-wrap  : break-word;
 }
 
 .back {
-
 }
 
 .flip-hide-back-panel {
