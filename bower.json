@@ -1,0 +1,20 @@
+{
+  "name": "FlashCard",
+  "version": "1.0",
+  "authors": [
+    "Phu Le <lqp.2792@gmail.com>"
+  ],
+  "description": "Learn Japanese by Flash Card",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "angular-route": "~1.2.22"
+  }
+}
