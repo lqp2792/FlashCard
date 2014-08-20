@@ -35,16 +35,25 @@
                 <div class="col-sm-12">
 
                 </div>
-                <div class="col-sm-12 center-block">
+                <div class="col-sm-4" role="meaning">
+
+                </div>
+                <div class="col-sm-4 center-block" role="flash card">
                     <div class="card center-block">
                         <div flip style="width: 100%; height: 100%">
                             <div class="thumbnail" ng-click="showBackPanel()">
-                                <div class="caption">
+                                <div class="word">
+                                    {{ word.kanji }}
                                 </div>
                             </div>
-                            <div class="thumbnail" style="background-color: #67b168" ng-click="showFrontPanel()"></div>
+                            <div class="thumbnail" style="background-color: #67b168" ng-click="showFrontPanel()">
+                                {{ word.hiragana }}
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-sm-4" role="example">
+
                 </div>
             </div>
         </div>

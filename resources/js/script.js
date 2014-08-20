@@ -11,8 +11,8 @@ cardApp.directive ("flip", function () {
         scope   : true,
         link    : function (scope, element) {
             var $panels = element.css ({ position: 'relative'}).children ().addClass ("flip-panel");
-            var frontPanel = $panels.eq (0);
-            var backPanel = $panels.eq (1);
+            var frontPanel = $panels.eq (0).addClass("front");
+            var backPanel = $panels.eq (1).addClass("back");
 
             scope.showFrontPanel = function () {
                 frontPanel.removeClass ("flip-hide-front-panel");
@@ -26,5 +26,13 @@ cardApp.directive ("flip", function () {
 
             scope.showFrontPanel ();
         }
+    }
+});
+
+cardApp.controller ('mainController', function ($scope) {
+    $scope.word = {
+        kanji   : '日本語',
+        hiragana: 'にほんご',
+        imi     : ['日本の国語。万葉仮名で書かれた古代日本語からの文献をもつ。敬語、男女の言葉の違いの発達などの複雑な面に比して、音体系の変化は比較的少なく保守的である。アルタイ諸語との同系説、南方の諸言語との同系説があるが、結論は得られていない。']
     }
 });
